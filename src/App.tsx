@@ -7,7 +7,7 @@ const App = () => {
     <h4>Resume:<a href="/resume.html">Click here</a></h4>
     <h4>Connect with me via:</h4>
     <h4>Github - <a href="https://github.com/Deepakkumar757">Link</a></h4>
-    <h4>Email - athithyanr4@gmail.com</h4></div>
+    <h4>Email - deepakumar0220@gmail.com</h4></div>
   )
 }
 
