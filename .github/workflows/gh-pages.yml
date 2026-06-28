@@ -45,7 +45,7 @@ jobs:
           test -f "dist/index.html" || exit 1
 
       - name: Upload to GitHub Pages
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: dist/
 
