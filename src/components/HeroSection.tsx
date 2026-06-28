@@ -50,19 +50,39 @@ export default function HeroSection() {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="flex flex-wrap justify-center gap-4"
         >
-          <a
-            href="#skills"
-            className="rounded-full bg-emerald-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-emerald-500 dark:bg-emerald-500 dark:hover:bg-emerald-400"
-          >
-            Explore Skills
-          </a>
-          <a
-            href="#projects"
-            className="rounded-full border border-slate-300 px-6 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-600 dark:text-slate-300 dark:hover:bg-slate-800"
-          >
-            View Projects
-          </a>
-        </motion.div>
+            <a
+              href="#skills"
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.getElementById('skills');
+                if (target) {
+                  const headerOffset = 80;
+                  const elementPosition = target.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.scrollY - headerOffset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
+              className="cursor-pointer rounded-full bg-emerald-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-emerald-500 dark:bg-emerald-500 dark:hover:bg-emerald-400"
+            >
+              Explore Skills
+            </a>
+            <a
+              href="#projects"
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.getElementById('projects');
+                if (target) {
+                  const headerOffset = 80;
+                  const elementPosition = target.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.scrollY - headerOffset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
+              className="cursor-pointer rounded-full border border-slate-300 px-6 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-600 dark:text-slate-300 dark:hover:bg-slate-800"
+            >
+              View Projects
+            </a>
+          </motion.div>
       </motion.div>
 
       <motion.div
