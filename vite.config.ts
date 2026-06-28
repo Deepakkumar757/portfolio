@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 
 
-// added base path for the portfolio deployment
+// added base path for the portfolio deployment in github pages
 export default defineConfig({
   base: '/portfolio/',
   plugins: [react(), tailwindcss()],
